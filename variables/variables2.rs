@@ -2,41 +2,15 @@
 // Make me compile! Scroll down for hints :)
 
 fn main() {
-    let x;
+    // let x = 0i32;
+    // let x = 10i32;
+    let x = 'c';
     if x == 10 {
         println!("Ten!");
     } else {
         println!("Not ten!");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // The compiler message is saying that Rust cannot infer the type that the
 // variable binding `x` has with what is given here.

@@ -1,6 +1,7 @@
 // ex5.rs
 // Make me compile!
 
+#[derive(Copy, Clone)]
 enum Reaction<'a> {
     Sad(&'a str),
     Happy(&'a str),
@@ -13,7 +14,7 @@ fn express(sentiment: Reaction) {
     }
 }
 
-fn main () {
+fn main() {
     let x = Reaction::Happy("It's a great day for Rust!");
     express(x);
     express(x);

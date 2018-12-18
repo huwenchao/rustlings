@@ -2,8 +2,8 @@
 // Make me compile! Scroll down for hints :)
 
 mod us_presidential_frontrunners {
-    use self::democrats::HILLARY_CLINTON as democrat;
-    use self::republicans::DONALD_TRUMP as republican;
+    pub use self::democrats::HILLARY_CLINTON as democrat;
+    pub use self::republicans::DONALD_TRUMP as republican;
 
     mod democrats {
         pub const HILLARY_CLINTON: &'static str = "Hillary Clinton";
@@ -17,26 +17,12 @@ mod us_presidential_frontrunners {
 }
 
 fn main() {
-    println!("candidates: {} and {}",
-             us_presidential_frontrunners::democrat,
-             us_presidential_frontrunners::republican);
+    println!(
+        "candidates: {} and {}",
+        us_presidential_frontrunners::democrat,
+        us_presidential_frontrunners::republican
+    );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // The us_presidential_frontrunners module is trying to present an external
 // interface (the `democrat` and `republican` constants) that is different than

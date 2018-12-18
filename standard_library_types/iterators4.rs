@@ -10,11 +10,17 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Scroll down for hints.
+    (1..=num).fold(1, |prod, n| prod * n)
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn factorial_of_0() {
+        assert_eq!(1, factorial(0));
+    }
 
     #[test]
     fn factorial_of_1() {
@@ -30,30 +36,6 @@ mod tests {
         assert_eq!(24, factorial(4));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // In an imperative language you might write a for loop to iterate through
 // multiply the values into a mutable variable. Or you might write code more
